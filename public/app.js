@@ -1,9 +1,43 @@
 console.log('I am alive >:D');
 
-add = () => {
-    firstName = document.getElementById('txtFirstName').value;
-    lastName = document.getElementById('txtLastName').value;
-    phoneNumber = document.getElementById('txtPhoneNumber').value;
-    adress = document.getElementById('txtAdress').value;
+var Customers = [];
+var Person = {
+    Name: '',
+    Phone: '',
+    Adress: '',
+}
 
+add = () => {
+    FullName = document.getElementById('txtFullName');
+    PhoneNumber = document.getElementById('txtPhoneNumber');
+    PostAdress = document.getElementById('txtPostAdress');
+    Person = {Name: FullName.value, Phone: PhoneNumber.value, Adress: PostAdress.value}
+    Customers.push(Person);
+
+    CustomerList = document.getElementById('customers');
+    
+    CustomerList.innerHTML='';
+
+    Customers.forEach(person => {
+        ListDetail = document.createElement('li');
+        ListDetail.innerHTML = (`Name ${person.Name} Phone ${person.Phone} Adress ${person.Adress}`);
+        CustomerList.appendChild(ListDetail)
+       
+        /* ListDetail = document.createElement('li');
+        ListDetail.innerHTML = person.Name
+        CustomerList.appendChild(ListDetail)
+
+        ListDetail = document.createElement('li');
+        ListDetail.innerHTML = person.Phone
+        CustomerList.appendChild(ListDetail)
+
+        ListDetail = document.createElement('li');
+        ListDetail.innerHTML = person.Adress
+        CustomerList.appendChild(ListDetail)*/
+    });
+
+    FullName.value = '';
+    PhoneNumber.value = '';
+    PostAdress.value = '';
+    Name.focus();
 }
