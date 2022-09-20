@@ -22,22 +22,10 @@ add = () => {
         ListDetail = document.createElement('li');
         ListDetail.innerHTML = (`Name ${person.Name} Phone ${person.Phone} Adress ${person.Adress}`);
         CustomerList.appendChild(ListDetail)
-       
-        /* ListDetail = document.createElement('li');
-        ListDetail.innerHTML = person.Name
-        CustomerList.appendChild(ListDetail)
-
-        ListDetail = document.createElement('li');
-        ListDetail.innerHTML = person.Phone
-        CustomerList.appendChild(ListDetail)
-
-        ListDetail = document.createElement('li');
-        ListDetail.innerHTML = person.Adress
-        CustomerList.appendChild(ListDetail)*/
     });
 
     FullName.value = '';
     PhoneNumber.value = '';
     PostAdress.value = '';
-    Name.focus();
+    FullName.focus();
 }
