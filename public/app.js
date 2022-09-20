@@ -29,3 +29,11 @@ add = () => {
     PostAdress.value = '';
     FullName.focus();
 }
+
+search = () => {
+    Search = document.getElementById('txtCustomerID').value;
+    OutputID = document.getElementById('searchCustomer');
+    Search -= 1;
+
+    OutputID.innerHTML = Customers[Search];
+} 
