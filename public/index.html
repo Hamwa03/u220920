@@ -10,18 +10,19 @@
 </head>
 <body>
     <div>
-        <input type="text" name="txtFullName" id="txtFullName">
-        <input type="text" name="txtPhoneNumber" id="txtPhoneNumber">
-        <input type="text" name="txtPostAdress" id="txtPostAdress">
+        <input type="text" name="txtFullName" id="txtFullName" placeholder="Full Name">
+        <input type="text" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="Phone Number">
+        <input type="text" name="txtPostAdress" id="txtPostAdress" placeholder="Post Adress">
+        <input type="text" name="txtEmailAdress" id="txtEmailAdress" placeholder="E-mail Adress">
         <button onclick="add()">Add</button>
-        <input type="text" name="txtCustomerID" id="txtCustomerID">
-        <button onclick="search()">Search</button>
+        <input type="text" name="txtCustomerID" id="txtCustomerID" placeholder="Customer ID" class="floatRight">
+        <button onclick="search()" class="floatRight">Search</button>
     </div>
     <div>
         <ul id="customers"></ul>
     </div>
     <div>
-        <p id="searchCustomer"></p>
+        <p id="searchCustomer" class="floatRight"></p>
     </div>
 </body>
 </html>

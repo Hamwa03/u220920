@@ -5,13 +5,15 @@ var Person = {
     Name: '',
     Phone: '',
     Adress: '',
+    Email: '',
 }
 
 add = () => {
     FullName = document.getElementById('txtFullName');
     PhoneNumber = document.getElementById('txtPhoneNumber');
     PostAdress = document.getElementById('txtPostAdress');
-    Person = {Name: FullName.value, Phone: PhoneNumber.value, Adress: PostAdress.value}
+    EmailAdress = document.getElementById('txtEmailAdress');
+    Person = {Name: FullName.value, Phone: PhoneNumber.value, Adress: PostAdress.value, Email: EmailAdress.value}
     Customers.push(Person);
 
     CustomerList = document.getElementById('customers');
@@ -31,9 +33,9 @@ add = () => {
 }
 
 search = () => {
-    Search = document.getElementById('txtCustomerID').value;
-    OutputID = document.getElementById('searchCustomer');
-    Search -= 1;
+    InputID = document.getElementById('txtCustomerID').value;
+    OutputID = document.getElementById('searchCustomer').value;
+    InputID -= 1;
 
-    OutputID.innerHTML = Customers[Search];
+    OutputID.innerHTML = Customers[InputID];
 } 
