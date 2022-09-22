@@ -22,7 +22,7 @@ add = () => {
 
     Customers.forEach(person => {
         ListDetail = document.createElement('li');
-        ListDetail.innerHTML = (`Name: ${person.Name} | Phone: ${person.Phone} | Email: ${person.Email}`);
+        ListDetail.innerHTML = (`Name: ${person.Name} | Phone: ${person.Phone} | Email: <a href="mailto:${person.Email}">${person.Email}</a>`);
         CustomerList.appendChild(ListDetail)
     });
 
