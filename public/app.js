@@ -39,7 +39,8 @@ search = () => {
 
     function findEmail(pointer) {
         return pointer.Email === InputID;
-    }
+    } // Testing function
 
-    OutputID.innerHTML = (JSON.stringify(Customers.find(findEmail)));
+    OutputID.innerHTML = (`${Customers.find(findEmail).Name} ${Customers.find(findEmail).Phone} ${Customers.find(findEmail).Adress} ${Customers.find(findEmail).Email}`);
+    // OutputID.innerHTML = (JSON.stringify(Customers.find(findEmail)));
 } 
