@@ -1,3 +1,12 @@
+body {
+    background-color: rgb(58, 59, 60);
+}
+
+.whiteText {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .floatRight {
     float: right;
 }

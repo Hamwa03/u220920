@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     <div>
         <input type="text" name="txtFullName" id="txtFullName" placeholder="Full Name">
         <input type="text" name="txtPhoneNumber" id="txtPhoneNumber" placeholder="Phone Number">
@@ -19,10 +19,10 @@
         <button onclick="search()" class="floatRight">Search</button>
     </div>
     <div>
-        <ul id="customers"></ul>
+        <ul id="customers" class="whiteText"></ul>
     </div>
-    <div>
-        <p id="searchCustomer" class="floatRight"></p>
+    <div class="floatRight">
+        <ul id="searchCustomer" class="whiteText"></ul>
     </div>
 </body>
 </html>

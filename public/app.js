@@ -22,20 +22,24 @@ add = () => {
 
     Customers.forEach(person => {
         ListDetail = document.createElement('li');
-        ListDetail.innerHTML = (`Name ${person.Name} Phone ${person.Phone} Adress ${person.Adress}`);
+        ListDetail.innerHTML = (`Name: ${person.Name} | Phone: ${person.Phone} | Email: ${person.Email}`);
         CustomerList.appendChild(ListDetail)
     });
 
     FullName.value = '';
     PhoneNumber.value = '';
     PostAdress.value = '';
+    EmailAdress.value = '';
     FullName.focus();
 }
 
 search = () => {
-    InputID = document.getElementById('txtCustomerID').value;
-    OutputID = document.getElementById('searchCustomer').value;
-    InputID -= 1;
+    var InputID = document.getElementById('txtCustomerID').value;
+    var OutputID = document.getElementById('searchCustomer');
 
-    OutputID.innerHTML = Customers[InputID];
+    function findEmail(pointer) {
+        return pointer.Email === InputID;
+    }
+
+    OutputID.innerHTML = (JSON.stringify(Customers.find(findEmail)));
 } 
